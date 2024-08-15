@@ -22,7 +22,7 @@ require_once dirname(__FILE__) . '/inc/nav-menu-walker.php';
 // require theme functions
 require_once dirname(__FILE__) . '/inc/woo.php';
 
-define('VERSION_CSS', '2606.1');
+define('VERSION_CSS', '2800.0');
 
 function gabu_register_styles()
 {
@@ -469,7 +469,7 @@ add_filter('woocommerce_email_order_items_args', 'custom_email_order_items_args'
 function custom_email_order_items_args($args)
 {
     $args['show_image'] = true;
-    $args['image_size'] = [75, 75];
+    $args['image_size'] = [150, 150];
 
     return $args;
 }
@@ -671,7 +671,7 @@ add_filter('woocommerce_admin_meta_boxes_variations_per_page', 'handsome_bearded
 add_filter('aws_search_page_posts_objects_ids', 'my_aws_search_page_posts_objects_ids');
 function my_aws_search_page_posts_objects_ids($return)
 {
-    return true;
+    return false;
 }
 
 /**
